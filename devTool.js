@@ -28,6 +28,21 @@ hiddenElementsL.forEach(ele => {
     observerL.observe(ele);
 });
 
+const observerT = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('showT');
+        } else {
+            entry.target.classList.remove('showT');
+        }
+    });
+});
+
+const hiddenElementsT = document.querySelectorAll(".hiddenT");
+hiddenElementsT.forEach(ele => {
+    observerT.observe(ele);
+});
+
 // mouse hover images swiper
 const swiper = new Swiper('.swiper', {
     autoplay: {
