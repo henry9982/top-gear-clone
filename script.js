@@ -27,67 +27,71 @@ const swiper = new Swiper('.swiper', {
 
   const mainTag = document.querySelector('.main-container')
 
-  const items = [
-    {
-        name:"Porsche 911 Dakar",
-        img:"pics/1 Dakar.webp",
-        info:"Of course there’s a new type of Porsche 911 on the way. When isn’t there? Soon we’re expecting to see a facelifted 992, with the 911 taking its first steps into the electric hybrid era. But in the meantime, there’s a jacked-up, rough-and-tumble version for living our your rally raid fantasies on the way to the supermarket."
-    },
-    {
-        name:"Lamborghini Huracan Sterrato",
-        img:"pics/2 lambo.webp",
-        info:"And Porsche isn’t the only outfit exploring the realms of the off-roady-ready sports car. Lamborghini will kiss goodbye the Huracan by putting the Sterrato into production. Expect spotlights, big bolt-on wheelarches and owners to feel incredibly smug every time they see a regular supercar gingerly edging their precious carbon fibre splitter over a speed bump."
-    },
-    {
-        name:"Range Rover Sport SV",
-        img:"pics/3 RR SV.webp",
-        info:"Land Rover’s Special Vehicle Operations division will rationalise all future projects behind one ‘SV’ badge, so the hot Range Rover Sport will lose a third of its ‘SVR’ badge. We’re expecting the engine to downsize too, likely from the raucous 5.0-litre supercharged V8 to a BMW-shared twin-turbo 4.4-litre V8 powerplant. Plug-in hybrid boost is a possibility, which SVR owners will love given how they always creep around so discreetly in their 2.2-tonne hypertanks."
-    },
-    {
-        name:"Alpine A110R",
-        img:"pics/4 Alpine.webp",
-        info:`A lighter Alpine! Wouldn’t have thought it possible, would you? Us neither. But thanks to a diet of carbon fibre components including a new roof, rear screen and even carbon wheels, the little A110 has lost 34kg while gaining downforce and apparently shedding drag.
+  const items = [[
+        {
+            name:"Porsche 911 Dakar",
+            img:"pics/1 Dakar.webp",
+            info:"Of course there’s a new type of Porsche 911 on the way. When isn’t there? Soon we’re expecting to see a facelifted 992, with the 911 taking its first steps into the electric hybrid era. But in the meantime, there’s a jacked-up, rough-and-tumble version for living our your rally raid fantasies on the way to the supermarket."
+        },
+        {
+            name:"Lamborghini Huracan Sterrato",
+            img:"pics/2 lambo.webp",
+            info:"And Porsche isn’t the only outfit exploring the realms of the off-roady-ready sports car. Lamborghini will kiss goodbye the Huracan by putting the Sterrato into production. Expect spotlights, big bolt-on wheelarches and owners to feel incredibly smug every time they see a regular supercar gingerly edging their precious carbon fibre splitter over a speed bump."
+        },
+        {
+            name:"Range Rover Sport SV",
+            img:"pics/3 RR SV.webp",
+            info:"Land Rover’s Special Vehicle Operations division will rationalise all future projects behind one ‘SV’ badge, so the hot Range Rover Sport will lose a third of its ‘SVR’ badge. We’re expecting the engine to downsize too, likely from the raucous 5.0-litre supercharged V8 to a BMW-shared twin-turbo 4.4-litre V8 powerplant. Plug-in hybrid boost is a possibility, which SVR owners will love given how they always creep around so discreetly in their 2.2-tonne hypertanks."
+        },
+        {
+            name:"Alpine A110R",
+            img:"pics/4 Alpine.webp",
+            info:`A lighter Alpine! Wouldn’t have thought it possible, would you? Us neither. But thanks to a diet of carbon fibre components including a new roof, rear screen and even carbon wheels, the little A110 has lost 34kg while gaining downforce and apparently shedding drag.
 
-        It’s also much stiffer, grippier, and the seats will hold you like King Kong grasps a damsel in distress. It could be close to sports car nirvana in 2023... or will it be too serious and too hardcore for its own good?`
-    },
-    {
-        name:`Mercedes-AMG C63`,
-        img:"pics/5 C63.webp",
-        info:`We’ll also be getting our hands on possibly the most controversial AMG of all time – including the C63 and AMG One hypercar. Yep, the C63 is back, and it looks handsome. But under the nostril-vented bonnet is no V8 – instead, it’s a 2.0-litre four-cylinder hybrid.
+            It’s also much stiffer, grippier, and the seats will hold you like King Kong grasps a damsel in distress. It could be close to sports car nirvana in 2023... or will it be too serious and too hardcore for its own good?`
+        },
+        {
+            name:`Mercedes-AMG C63`,
+            img:"pics/5 C63.webp",
+            info:`We’ll also be getting our hands on possibly the most controversial AMG of all time – including the C63 and AMG One hypercar. Yep, the C63 is back, and it looks handsome. But under the nostril-vented bonnet is no V8 – instead, it’s a 2.0-litre four-cylinder hybrid.
 
-        Basically, an A45 engine with a chilli-powder electric boost shoved up its backside. The numbers are huge: 670bhp, 752lb ft – and 2,145kg. We’ll be taking the Christmas holidays to read the four-thousand page instruction manual.`
-    },
-    {
-        name:"BMW M3 Touring",
-        img:"pics/6 M3.webp",
-        info:`And this is one of the contenders the C63 is aimed squarely at – BMW’s conceptually rather simple M3. No electrification or plug-in-ability here – just a thumping great 3.0-litre 503bhp straight-six in the front. And – at last – and estate body at the back.
+            Basically, an A45 engine with a chilli-powder electric boost shoved up its backside. The numbers are huge: 670bhp, 752lb ft – and 2,145kg. We’ll be taking the Christmas holidays to read the four-thousand page instruction manual.`
+        },
+    ],
+    [
+        {
+            name:"BMW M3 Touring",
+            img:"pics/6 M3.webp",
+            info:`And this is one of the contenders the C63 is aimed squarely at – BMW’s conceptually rather simple M3. No electrification or plug-in-ability here – just a thumping great 3.0-litre 503bhp straight-six in the front. And – at last – and estate body at the back.
 
-        We’re already big fans of the M3 Competition with xDrive four-wheel drive (so long as we approach it with our eyes closed) so the M3 wagon promises to be a very complete bit of kit.`
-    },
-    {
-        name:"Hyundai Ioniq 5 N",
-        img:"pics/7 Ioniq.webp",
-        info:`No pressure Hyundai, but everything the N Division has touched so far has been bloody brilliant. The i30N and i20N hot hatches, the wild Kona N mini-SUV – it’s gone from zero to hero and stayed there. Now N must make an electric crossover entertaining, by applying itself vigorously to the cyberpunk Ioniq 5 hatchback. 
+            We’re already big fans of the M3 Competition with xDrive four-wheel drive (so long as we approach it with our eyes closed) so the M3 wagon promises to be a very complete bit of kit.`
+        },
+        {
+            name:"Hyundai Ioniq 5 N",
+            img:"pics/7 Ioniq.webp",
+            info:`No pressure Hyundai, but everything the N Division has touched so far has been bloody brilliant. The i30N and i20N hot hatches, the wild Kona N mini-SUV – it’s gone from zero to hero and stayed there. Now N must make an electric crossover entertaining, by applying itself vigorously to the cyberpunk Ioniq 5 hatchback. 
 
-        The N team insist they’re not interested in building a drag-race monster and though the dual-motor I5N will be rapid, we’re promised handling giggles and maybe even an amusing noise generator to make e-motoring less clinical. So far, truly laugh-out-loud EVs have been few and far between – over to Hyundai to prove the N division futureproof.`
-    },
-    {
-        name:"All the Le Mans cars!",
-        img:"pics/8 LM24.webp",
-        info:'2023 is the year endurance racing fans have been waiting for. Missed the news? In short, lots of manufacturers are about to throw a huge pile of time and money at the sport, with the emergence of the LMh and LMDh classes at Le Mans and beyond. Joining Toyota and Glickenhaus in top-tier day-and-night racing we’ve got BMW, Porsche, Cadillac, Lamborghini, Peugeot… it ought to make Drive To Survive look like a vicar’s tea party.'
-    },
-    {
-        name:"BMW M2",
-        img:"pics/9 M2.webp",
-        info:`We’ve already tested a prototype of the new M coupe, and discovered some of the key tech spec. Being based on the current M3/4 platform, the new M2 will be a heaver car than before, but the 3.0-litre straight-six is up to around 450bhp to counteract it.
+            The N team insist they’re not interested in building a drag-race monster and though the dual-motor I5N will be rapid, we’re promised handling giggles and maybe even an amusing noise generator to make e-motoring less clinical. So far, truly laugh-out-loud EVs have been few and far between – over to Hyundai to prove the N division futureproof.`
+        },
+        {
+            name:"All the Le Mans cars!",
+            img:"pics/8 LM24.webp",
+            info:'2023 is the year endurance racing fans have been waiting for. Missed the news? In short, lots of manufacturers are about to throw a huge pile of time and money at the sport, with the emergence of the LMh and LMDh classes at Le Mans and beyond. Joining Toyota and Glickenhaus in top-tier day-and-night racing we’ve got BMW, Porsche, Cadillac, Lamborghini, Peugeot… it ought to make Drive To Survive look like a vicar’s tea party.'
+        },
+        {
+            name:"BMW M2",
+            img:"pics/9 M2.webp",
+            info:`We’ve already tested a prototype of the new M coupe, and discovered some of the key tech spec. Being based on the current M3/4 platform, the new M2 will be a heaver car than before, but the 3.0-litre straight-six is up to around 450bhp to counteract it.
 
-        The rear axle is also inherited from the M4, and while the eight-speed automatic gearbox is available, the M2 will be the final M car ever to be offered with a six-speed manual transmission. So it's a sure-fire modern classic. Are the blocky looks growing on you?`
-    },
-    {
-        name:"Lotus Emira 4cyl ‘AMG’",
-        img:"pics/10 Emira.webp",
-        info:`Lotus has been up-front that the new Emira will be its final petrol-engined car, but said engine is not just the Toyota-borrowed supercharged V6 on offer from this year. Soon we’ll get the ‘entry-level’ version, complete with AMG’s wild turbo four-cylinder which we know is good for up to 416bhp in the A45S. It’ll be joined solely to a twin-clutch paddleshift gearbox which Lotus has calibrated. One of the most exciting engines in production today, slotted amid a deft-handing British sports car? Expectations are VERY high.`
-    },
+            The rear axle is also inherited from the M4, and while the eight-speed automatic gearbox is available, the M2 will be the final M car ever to be offered with a six-speed manual transmission. So it's a sure-fire modern classic. Are the blocky looks growing on you?`
+        },
+        {
+            name:"Lotus Emira 4cyl ‘AMG’",
+            img:"pics/10 Emira.webp",
+            info:`Lotus has been up-front that the new Emira will be its final petrol-engined car, but said engine is not just the Toyota-borrowed supercharged V6 on offer from this year. Soon we’ll get the ‘entry-level’ version, complete with AMG’s wild turbo four-cylinder which we know is good for up to 416bhp in the A45S. It’ll be joined solely to a twin-clutch paddleshift gearbox which Lotus has calibrated. One of the most exciting engines in production today, slotted amid a deft-handing British sports car? Expectations are VERY high.`
+        },
+    ],
+    [
     {
         name:"Alfa Romeo ‘6C’ supercar",
         img:"pics/11 alfa.webp",
@@ -117,6 +121,8 @@ const swiper = new Swiper('.swiper', {
         img:"pics/15 MC20.webp",
         info:`Maserati’s electric era is now underway and it’s off to a fine start, as we discovered in our world exclusive drive of the GranTurismo Folgore. Next in the strategy is an all-electric version of the Grecale SUV to take the fight to the next gen Porsche Macan EV, but before that, Maserati’s new supercar is swapping cylinders for batteries. Set to appear first as an open-top ‘Cielo’ roadster, the electric MC20 will boast a four-figure power output to offset its increased weight.`
     },
+    ],
+    [
     {
         name:"Gordon Murray T.33 ‘Spider’",
         img:"pics/16 gma.webp",
@@ -152,6 +158,8 @@ const swiper = new Swiper('.swiper', {
 
         Expect twin electric motors delivering a total of over 600bhp and 300 miles of range as America tries to usurp Britain’s grip on the ultra-lux barge game.`
     },
+    ],
+    [
     {
         name:"Ford Mustang Dark Horse",
         img:"pics/21 stang.webp",
@@ -175,42 +183,52 @@ const swiper = new Swiper('.swiper', {
         
         Worth the wait? Hopefully 2023 is the year we definitely, actually, definitively find out.`
     },
-  ]
+  ]]
 
-
+  let num = 0
 for (let i = 0; i < items.length; i++) {
-        const num = i+1
-        const countText = num<10?`0${num}`:num
-        items[i].count = countText
+        const array = items[i]
+        for (let j = 0; j < array.length; j++) {
+            num = num + 1
+            const countText = num<10?`0${num}`:num
+            
+            array[j].count = countText
+        }
+
 }
 console.log(items)
+let arrayNum = 0
 
-let itemsContain =""
-makingItems(items)
+makingItems(items[arrayNum])
 function makingItems(array) {
+    let itemsContain =""
     array.forEach((object)=>{
-        itemsContain+=`
-        <div class="inner-contain">
-        <div class="item">
-            <div class="title">
-                <div class="inner-title">
-                    <h1>${object.count}</h1>
-                    <div>${object.name}</div>
+            itemsContain+=`
+            <div class="inner-contain">
+            <div class="item">
+                <div class="title">
+                    <div class="inner-title">
+                        <h1>${object.count}</h1>
+                        <div>${object.name}</div>
+                    </div>
+                    <div class="info">
+                        ${object.info}
+                    </div>
                 </div>
-                <div class="info">
-                    ${object.info}
+                <div class="item-image hiddenR">
+                    <img src="${object.img}" alt="">
                 </div>
+    
             </div>
-            <div class="item-image hiddenR">
-                <img src="${object.img}" alt="">
-            </div>
-
         </div>
-    </div>
-        `
-    })
+            `
+        })
     mainTag.innerHTML=itemsContain
 }
+
+
+
+
 let setTimeout1Id
 let setTimeout2Id
 
@@ -443,3 +461,103 @@ document.addEventListener("DOMContentLoaded", toggleAnimations);
 // Add event listener to the switch button
 switchButton.addEventListener('change', toggleAnimations);
 */
+const countTag = document.querySelector('.box-count')
+const previousBtnTag = document.querySelector('.previous-btn')
+const nextBtnTag = document.querySelector('.next-btn')
+previousBtnTag.addEventListener("click",()=>{
+    if (arrayNum===0) {
+        previousBtnTag.style.opacity="0.5"
+        return
+    }
+    countTag.innerHTML=arrayNum
+    previousBtnTag.style.opacity="1"
+    nextBtnTag.style.opacity="1"
+    arrayNum --
+    mainTag.innerHTML=''
+    makingItems(items[arrayNum])
+    const observerR = new IntersectionObserver((entries)=>{
+        entries.forEach((entry)=>{
+            if (entry.isIntersecting) {
+                entry.target.classList.add('showR')
+            }else{
+                entry.target.classList.remove('showR')
+            }
+        })
+    })
+    const hiddenElementsR = document.querySelectorAll('.hiddenR')
+    hiddenElementsR.forEach((ele)=>observerR.observe(ele))
+    
+    
+    const observerT = new IntersectionObserver((entries)=>{
+        entries.forEach((entry)=>{
+            if (entry.isIntersecting) {
+                entry.target.classList.add('showR')
+            }else{
+                entry.target.classList.remove('showR')
+            }
+        })
+    })
+    const hiddenElementsT = document.querySelectorAll('.title')
+    hiddenElementsT.forEach((ele)=>observerT.observe(ele))
+})
+nextBtnTag.addEventListener("click",()=>{
+    if (arrayNum===4) {
+        nextBtnTag.style.opacity="0.5"
+        return
+    }
+    countTag.innerHTML=arrayNum+2
+    previousBtnTag.style.opacity="1"
+    nextBtnTag.style.opacity="1"
+    arrayNum ++
+    mainTag.innerHTML=''
+    makingItems(items[arrayNum])
+    const observerR = new IntersectionObserver((entries)=>{
+        entries.forEach((entry)=>{
+            if (entry.isIntersecting) {
+                entry.target.classList.add('showR')
+            }else{
+                entry.target.classList.remove('showR')
+            }
+        })
+    })
+    const hiddenElementsR = document.querySelectorAll('.hiddenR')
+    hiddenElementsR.forEach((ele)=>observerR.observe(ele))
+    
+    
+    const observerT = new IntersectionObserver((entries)=>{
+        entries.forEach((entry)=>{
+            if (entry.isIntersecting) {
+                entry.target.classList.add('showR')
+            }else{
+                entry.target.classList.remove('showR')
+            }
+        })
+    })
+    const hiddenElementsT = document.querySelectorAll('.title')
+    hiddenElementsT.forEach((ele)=>observerT.observe(ele))
+})
+
+// menu icon for mobile
+const menuBtnContain = document.querySelector('.menu-btn-contain')
+const menuicon = document.querySelector('.menu-icon')
+const line1 = document.querySelector('.line1')
+const line2 = document.querySelector('.line2')
+const line3 = document.querySelector('.line3')
+
+menuicon.addEventListener('click',()=>{
+    if (menuicon.classList.contains('clicked')) {
+        document.body.style.overflowY="scroll"
+        line1.classList.remove('start')
+        line2.classList.remove('middle')
+        line3.classList.remove('end')
+        menuBtnContain.classList.remove('menu-btn-contain-mb')
+        menuicon.classList.remove('clicked')
+        return
+    }
+    document.body.style.overflow="hidden"
+    line1.classList.add('start')
+    line2.classList.add('middle')
+    line3.classList.add('end')
+    menuBtnContain.classList.add('menu-btn-contain-mb')
+    menuicon.classList.add('clicked')
+})
