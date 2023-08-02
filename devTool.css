@@ -86,7 +86,7 @@ h1{
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;    margin: 0 10px;
     /* border: 5px solid black; */
     border-radius: 5px;
-    height: 120px;
+    /* height: 120px; */
 }
 .icon{
     width: 100px;
@@ -401,11 +401,14 @@ svg{
       }
 
 }
+<<<<<<< HEAD
 @media screen and (max-width:660px) {
     h1{
         letter-spacing: 10px;
     }
 }
+=======
+>>>>>>> dc72083fac6d446308e7853d5575d76c3e80fa4f
 @media screen and (max-width:500px) {
     .description2{
         width: 130%;
@@ -448,7 +451,11 @@ svg{
         height: 300px;
     }
     .mouse-hover-tool{
+<<<<<<< HEAD
         margin-bottom: 200px;
+=======
+        margin-bottom: 0px;
+>>>>>>> dc72083fac6d446308e7853d5575d76c3e80fa4f
         padding: 0 70px;
         height: 80vh;
     }
@@ -473,6 +480,7 @@ svg{
         border: 1px solid white;
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     }
+<<<<<<< HEAD
     .mouse-hover-tool{
         margin-bottom: 0px;
         padding: 0 70px;
@@ -484,6 +492,12 @@ svg{
     .inner-icon{
         height: 80px;
     }
+=======
+
+}
+@media screen and (max-width:425px) {
+
+>>>>>>> dc72083fac6d446308e7853d5575d76c3e80fa4f
     .icon{
         width: 60px;
         height: 60px;
